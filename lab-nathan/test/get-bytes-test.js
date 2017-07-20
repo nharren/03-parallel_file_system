@@ -14,7 +14,7 @@ describe('get-bytes', function() {
   it('should return the first 8 bytes of each asset in order', function(done) {
     let files = [`${__dirname}/../assets/one.txt`, `${__dirname}/../assets/two.txt`, `${__dirname}/../assets/three.txt`];
     getBytes(files, 8, function(err, data) {
-      expect(data).to.deep.equal(['4c6f72656d2069', '496e206d616c65', '51756973717565']);
+      expect(data).to.deep.equal(['4c6f72656d206970', '496e206d616c6573', '5175697371756520']);
       done();
     });
   });

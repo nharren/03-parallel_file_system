@@ -10,7 +10,7 @@ let getBytes = function(filePaths, byteCount, callback, buffer = []) {
   fs.readFile(filePath, function(err, data) {
     if (err) callback(err);
 
-    buffer.push(data.toString('hex', 0, byteCount - 1));
+    buffer.push(data.toString('hex', 0, byteCount));
 
     getBytes(filePaths, byteCount, callback, buffer);
   });
